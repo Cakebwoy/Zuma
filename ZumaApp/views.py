@@ -1,9 +1,10 @@
 from django.shortcuts import render 
 from django.shortcuts import  redirect
 from django.contrib.auth.forms import UserCreationForm
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.contrib.auth import login, logout, authenticate
 from .models import Signin
+from .forms import NameForm
 
 
 # Create your views here.
@@ -20,7 +21,7 @@ from .models import Signin
 def signin(request):
     
     if request.method == "POST":
-        data = request.POST
+        data = NameForm(request.POST)
         username = data["username"]
         password = data.get("password")
 

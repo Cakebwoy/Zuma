@@ -25,7 +25,7 @@ urlpatterns = [
     path('', views.signin, name='signin'),
     path('index', views.index, name='index'),
     path('buysel', views.buysel, name='buysel'),
-
+    path('index', views.index, name='index')
     
 
     

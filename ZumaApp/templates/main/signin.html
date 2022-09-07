@@ -24,29 +24,34 @@
 
             {% csrf_token %}
 
-            <h2 class="title">Sign I</h2>
+            <h2 class="title">Sign In</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
               <input type="text" placeholder="Username" name="username" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
+
               <input type="password" placeholder="Password"  name="password"/>
             </div>
-            <a href="{% url 'index' %}" input type="submit" value="Login now" class="btn solid"></a>
+            <!-- <input type="submit" value="Login now" class="btn solid"> -->
+            <div class="logino">
+              {{ form }}
+              <a href="{% url 'index' %}">LOGIN</a>
+            </div>
 
             <p class="social-text">Or Sign in with social latforms</p>
             <div class="social-media">
-              <a href="#" class="social-icon">
+              <a href="www.facebook.com" class="social-icon">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#" class="social-icon">
+              <a href="www.twitter.com" class="social-icon">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="#" class="social-icon">
+              <a href="www.google.com" class="social-icon">
                 <i class="fab fa-google"></i>
               </a>
-              <a href="#" class="social-icon">
+              <a href="www.linkedin.com" class="social-icon">
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
@@ -70,7 +75,11 @@
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="Password" name="password"/>
             </div><br>
-            <a href="{% url 'index' %}" input type="submit" class="btn" value="Sign up" />
+            <!-- <a href="{% url 'index' %}" input type="submit" class="btn" value="Sign up" /> -->
+            <div class="logino">
+              <a href="{% url 'index' %}">LOGIN</a>
+            </div>
+
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
