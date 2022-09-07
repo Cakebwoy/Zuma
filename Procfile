@@ -1,0 +1,1 @@
+web: gunicorn Zuma.wsgi --log-file -
